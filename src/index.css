@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+
+  --color-primary-50: var(--color-indigo-50);
+  --color-primary-100: var(--color-indigo-100);
+  --color-primary-200: var(--color-indigo-200);
+  --color-primary-300: var(--color-indigo-300);
+  --color-primary-400: var(--color-indigo-400);
+  --color-primary-500: var(--color-indigo-500);
+  --color-primary-600: var(--color-indigo-600);
+  --color-primary-700: var(--color-indigo-700);
+  --color-primary-800: var(--color-indigo-800);
+  --color-primary-900: var(--color-indigo-900);
+  --color-primary-950: var(--color-indigo-950);
+}
+
+/* Custom styles for clean glassmorphism and transitions */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 transition-colors duration-200 font-sans;
+  }
+  
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(241, 245, 249, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.2);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Recharts customization in dark mode */
+.recharts-tooltip-wrapper {
+  outline: none !important;
+}
+
+.dark .recharts-default-tooltip {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
