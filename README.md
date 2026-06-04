@@ -8,6 +8,8 @@ Designed to mimic a production SaaS application, NovaCart supports dual-portal w
 
 ## 🚀 Live Demo & One-Click Deploy
 
+* **Live Demo URL:** [https://rococo-ganache-7ae9d0.netlify.app/](https://rococo-ganache-7ae9d0.netlify.app/)
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JayanthKumarChinthakindi/NovaCart)
 
 * **Demo Credentials:**
