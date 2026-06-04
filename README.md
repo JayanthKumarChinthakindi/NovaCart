@@ -113,12 +113,3 @@ src/
    ```
 3. Drag-and-drop the generated `dist` folder into the Netlify Drop dashboard, or push the repository to GitHub and connect it for automatic Git-based CI/CD deploys.
 
----
-
-## 🎓 Technical Interview Talking Points
-If asked to explain this project during a technical screening, highlight these advanced frontend concepts:
-
-1. **Performance via Route-Based Code Splitting:** Point to `AppRoutes.jsx` to show how we import page chunks using `React.lazy` and compile them only as users navigate to them, optimizing initial page weight.
-2. **State Sync & Custom Hooks:** Highlight `useLocalStorage` and custom contexts to demonstrate your understanding of state persistence, caching, and state sharing without prop-drilling.
-3. **Decoupled API Design:** Explain how you designed the services (`productService.js`, etc.) to return Promises with simulated latency. This decouples the UI layer from the backend API, allowing the frontend to be linked to a real REST API in the future simply by editing the endpoint URLs.
-4. **Cascading Render Optimizations:** Point out how we fetch data inside `useEffect` and handle states cleanly to avoid unnecessary DOM reflows.
