@@ -6,9 +6,10 @@ Designed to mimic a production SaaS application, NovaCart supports dual-portal w
 
 ---
 
-## 🚀 Live Demo & Screenshots
+## 🚀 Live Demo & One-Click Deploy
 
-* **Live Demo:** [Deploy Placeholder - Netlify link goes here]
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JayanthKumarChinthakindi/NovaCart)
+
 * **Demo Credentials:**
   * **Buyer Portal:** `buyer@novacart.com` / `password123`
   * **Seller Portal:** `seller@novacart.com` / `password123`
