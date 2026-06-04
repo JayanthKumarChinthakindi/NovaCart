@@ -173,11 +173,6 @@ export default function Navbar() {
                         <FiShoppingBag className="w-4 h-4" /> Order History
                       </Link>
                     ) : (
-                      <Link to="/seller/dashboard" className="flex items-center gap-2 px-4 py-2.5 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                        <FiBriefcase className="w-4 h-4" /> Seller Dashboard
-                      </Link>
-                    )}
-                    {isSeller && !isSellerRoute && (
                       <Link to="/seller/dashboard" className="flex items-center gap-2 px-4 py-2.5 text-primary-600 dark:text-primary-400 font-medium hover:bg-primary-50 dark:hover:bg-slate-700/50 transition-colors">
                         <FiBriefcase className="w-4 h-4" /> Seller Dashboard
                       </Link>
@@ -293,11 +288,6 @@ export default function Navbar() {
                     Order History
                   </Link>
                 ) : (
-                  <Link to="/seller/dashboard" className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
-                    Seller Dashboard
-                  </Link>
-                )}
-                {isSeller && !isSellerRoute && (
                   <Link to="/seller/dashboard" className="block px-3 py-2 rounded-lg text-base font-medium text-primary-600 dark:text-primary-400 hover:bg-slate-100 dark:hover:bg-slate-800">
                     Seller Dashboard
                   </Link>
