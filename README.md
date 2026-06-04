@@ -6,11 +6,9 @@ Designed to mimic a production SaaS application, NovaCart supports dual-portal w
 
 ---
 
-## 🚀 Live Demo & One-Click Deploy
+## 🚀 Live Demo
 
 * **Live Demo URL:** [https://rococo-ganache-7ae9d0.netlify.app/](https://rococo-ganache-7ae9d0.netlify.app/)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JayanthKumarChinthakindi/NovaCart)
 
 * **Demo Credentials:**
   * **Buyer Portal:** `buyer@novacart.com` / `password123`
@@ -105,14 +103,4 @@ src/
    npm run build
    ```
 
----
-
-## 🌍 Deployment Steps (Netlify)
-
-1. Run `npm run build` to generate the production `dist/` directory.
-2. The built project is fully ready for client-side routing on site refreshes thanks to the `public/_redirects` file which maps:
-   ```
-   /*    /index.html   200
-   ```
-3. Drag-and-drop the generated `dist` folder into the Netlify Drop dashboard, or push the repository to GitHub and connect it for automatic Git-based CI/CD deploys.
 
