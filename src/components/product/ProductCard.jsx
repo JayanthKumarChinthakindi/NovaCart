@@ -44,7 +44,7 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="group relative flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg border border-slate-100 dark:border-slate-700/80 transition-all duration-300">
-      
+
       {/* Product Image & Overlays */}
       <Link to={`/products/${id}`} className="block relative aspect-square overflow-hidden bg-slate-100 dark:bg-slate-900">
         <img
@@ -90,7 +90,7 @@ export default function ProductCard({ product }) {
       {/* Product Metadata Details */}
       <div className="p-4 flex flex-col flex-1 text-left">
         <p className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider mb-1 truncate">{sellerName}</p>
-        
+
         <Link to={`/products/${id}`} className="block mb-1.5 flex-1">
           <h3 className="font-semibold text-sm text-slate-800 dark:text-slate-100 hover:text-primary-600 line-clamp-2 leading-tight">
             {name}
@@ -118,8 +118,8 @@ export default function ProductCard({ product }) {
             disabled={stock <= 0}
             className={`
               p-2.5 rounded-lg transition-all flex items-center justify-center cursor-pointer
-              ${stock <= 0 
-                ? 'bg-slate-150 text-slate-405 cursor-not-allowed dark:bg-slate-750 dark:text-slate-500' 
+              ${stock <= 0
+                ? 'bg-slate-150 text-slate-405 cursor-not-allowed dark:bg-slate-750 dark:text-slate-500'
                 : 'bg-primary-600 hover:bg-primary-700 text-white shadow-md shadow-primary-200/50 dark:shadow-none'
               }
             `}

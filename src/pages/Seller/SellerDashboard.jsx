@@ -47,7 +47,7 @@ export default function SellerDashboard() {
 
   return (
     <SellerLayout>
-      
+
       {/* Title Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
@@ -77,7 +77,7 @@ export default function SellerDashboard() {
         </div>
       ) : (
         <div className="space-y-8">
-          
+
           {/* KPI StatsCards */}
           <StatsCards stats={stats.kpis} />
 
@@ -87,14 +87,14 @@ export default function SellerDashboard() {
               <FiTrendingUp className="text-primary-500 w-5 h-5" />
               <h3 className="font-heading font-bold text-base">Revenue Trajectory ($)</h3>
             </div>
-            
+
             <div className="h-64 sm:h-72 w-full text-xs font-semibold">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={stats.revenueChart} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorRev" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366f1" stopOpacity={0.25}/>
-                      <stop offset="95%" stopColor="#6366f1" stopOpacity={0}/>
+                      <stop offset="5%" stopColor="#6366f1" stopOpacity={0.25} />
+                      <stop offset="95%" stopColor="#6366f1" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" className="dark:stroke-slate-700" />
