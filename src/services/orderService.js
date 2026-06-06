@@ -35,8 +35,22 @@ export const orderService = {
   },
 
   getSellerAnalytics: async (sellerId) => {
-    // Return mock analytics data
-    return simulateApiCall(SELLER_ANALYTICS);
+    // Return mock analytics data with dynamic totalProducts
+    const analytics = { ...SELLER_ANALYTICS };
+    try {
+      const productsData = localStorage.getItem('nc_products');
+      if (productsData) {
+        const products = JSON.parse(productsData);
+        const sellerProducts = products.filter((p) => p.sellerId === Number(sellerId));
+        analytics.kpis = {
+          ...analytics.kpis,
+          totalProducts: sellerProducts.length,
+        };
+      }
+    } catch (err) {
+      console.error('Error calculating total products in analytics', err);
+    }
+    return simulateApiCall(analytics);
   },
 
   getSellerOrders: async (sellerId) => {

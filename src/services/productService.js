@@ -8,8 +8,8 @@ const getProducts = () => {
     return INITIAL_PRODUCTS;
   }
   let parsed = JSON.parse(products);
-  // Migrate existing local storage: if no products exist for sellerId 2, assign 101/102 products to them
-  if (!parsed.some((p) => p.sellerId === 2)) {
+  // Migrate existing local storage: if there are any products for seller 101/102, assign them to seller 2
+  if (parsed.some((p) => p.sellerId === 101 || p.sellerId === 102)) {
     parsed = parsed.map((p) => {
       if (p.sellerId === 101 || p.sellerId === 102) {
         return { ...p, sellerId: 2, sellerName: 'AeroSound & More' };
