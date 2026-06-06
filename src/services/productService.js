@@ -7,7 +7,18 @@ const getProducts = () => {
     localStorage.setItem('nc_products', JSON.stringify(INITIAL_PRODUCTS));
     return INITIAL_PRODUCTS;
   }
-  return JSON.parse(products);
+  let parsed = JSON.parse(products);
+  // Migrate existing local storage: if no products exist for sellerId 2, assign 101/102 products to them
+  if (!parsed.some((p) => p.sellerId === 2)) {
+    parsed = parsed.map((p) => {
+      if (p.sellerId === 101 || p.sellerId === 102) {
+        return { ...p, sellerId: 2, sellerName: 'AeroSound & More' };
+      }
+      return p;
+    });
+    localStorage.setItem('nc_products', JSON.stringify(parsed));
+  }
+  return parsed;
 };
 
 export const productService = {
